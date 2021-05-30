@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->text('title')->unique();
             $table->string('description')->nullable();
-            $table->boolean('status_check')->default(false);
+            $table->boolean('status_check')->nullable();
             $table->string('progress')->nullable();
             $table->timestamps();
             $table->foreign('list_id')->references('id')->on('mlists')
